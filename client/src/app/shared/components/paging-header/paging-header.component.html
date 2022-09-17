@@ -1,0 +1,14 @@
+<header>
+  Display  
+
+  <span *ngIf="totalSize && totalSize > 0">
+      <strong>
+      {{ (pageNumer - 1)  * pageSize + 1}}
+      - {{pageNumer*pageSize > this.totalSize ? this.totalSize : pageNumer*pageSize}}
+      </strong> of <strong>{{ this.totalSize }}</strong> Results 
+  </span>
+  <span *ngIf="totalSize === 0">
+      No Product Available under this filter
+  </span>
+  
+</header>
