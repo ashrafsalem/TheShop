@@ -1,3 +1,19 @@
 <div class="container mt-5">
-    <h1>Server Error</h1>
+    <h4>Internal Server Error - Refreshing the page will make the error disappear</h4>
+    <ng-conatiner *ngIf="error">
+        <h5 class="text-danger">Error: {{ error.message }}</h5>
+        <p class="font-weight-bold">
+            Not: If you are seeing this, then angular is probably not responsible.
+        </p>
+        <p>What to do next?</p>
+        <ol>
+            <li>Open crome dev tools.</li>
+            <li>Inspect the network tab.</li>
+            <li>Check the failing request.</li>
+            <li>Examin this request URL - Make sure this is correct</li>
+            <li>Repreduce the same response in postman - if we get the same response , then the issue not in angular</li>
+        </ol>
+        <p>Following the stack trace</p>
+        <code class="mt-5" style="background-color:whitesmoke;">{{ error.details }}</code>
+    </ng-conatiner>
 </div>
