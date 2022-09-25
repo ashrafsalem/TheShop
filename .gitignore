@@ -1,5 +1,5 @@
 obj
 bin
 *.db
-appsettings.json
-node_modules
+API/appsettings.json
+client/node_modules
